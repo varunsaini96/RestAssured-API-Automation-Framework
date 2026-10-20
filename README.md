@@ -23,7 +23,7 @@ src/test/java/api
 └── utilities   # Excel reader, data providers, Extent report listener
 src/test/resources
 ├── log4j2.xml  # Logging configuration
-testng.xml      # Suite file that runs the tests
+testing.xml      # Suite file that runs the tests
 ```
 
 ## What is covered
