@@ -7,6 +7,24 @@
     <groupId>org.example</groupId>
     <artifactId>APIAutomationFramework</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.2</version>
+                <configuration>
+<!--                     put your configurations here -->
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testing.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+<!--                        <includes>-->
+<!--                            <include>**/UserTesting.java</include>-->
+<!--                        </includes>-->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -38,6 +56,12 @@
             <artifactId>json-simple</artifactId>
             <version>1.1.1</version>
             <scope>compile</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.json</groupId>
